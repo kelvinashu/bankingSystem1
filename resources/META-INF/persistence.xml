@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+
+	<persistence-unit name="jpaPersistenceUnit"
+		transaction-type="RESOURCE_LOCAL">
+		<class>za.co.bankingsystem.entities.Customer</class>
+		<class>za.co.bankingsystem.entities.Employee</class>
+		<class>za.co.bankingsystem.entities.Account</class>
+		<class>za.co.bankingsystem.entities.Card</class>
+		<class>za.co.bankingsystem.entities.Transaction</class>
+		<class>za.co.bankingsystem.entities.User</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.cj.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost/web_bank_db" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password"
+				value="2011menus" />
+			<property name="eclipselink.ddl-generation.output-mode"
+				value="database" />
+			<property name="eclipselink.ddl-generation"
+				value="create-tables" />
+		</properties>
+
+	</persistence-unit>
+
+</persistence>
